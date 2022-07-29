@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ComponentDecorator } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: "wl-app",
+    templateUrl: "./app.component.html",
+    styleUrls: [
+        "./app.component.css"
+    ]
 })
-export class AppComponent {
-  title = 'ng-wishlist-webapp';
-}
+export class AppComponent{}
