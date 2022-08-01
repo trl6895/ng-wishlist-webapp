@@ -1,11 +1,12 @@
-<div class="grid-elem">
-    <h2 class="game-title">Outer Wilds</h2>
-    <div class="game-info">
-        <em class="cat">Developer:   </em>Mobius Digital<br>
-        <em class="cat">Publisher:   </em>Annapurna Interactive<br>
-        <em class="cat">Release Date:   </em>5.28.2019<br>
-        <em class="cat">Genres:   </em>Expolration, Space, Mystery<br>
-    </div>
+<div>
+    <h2 class="game-title">{{ vg.title }}</h2>
+</div>
+<div class="game-info">
+    <em class="cat">Developer:   </em>{{ vg.dev }}<br>
+    <em class="cat">Publisher:   </em>{{ vg.pub }}<br>
+    <em class="cat">Release Date:   </em>{{ vg.date }}<br>
+    <em class="cat">Genres:   </em>Expolration, Space, Mystery<br>
+    <a class="wishlist" (click)="wishlist()">Wishlist This Game!</a>
 </div>
 <div class="grid-elem">
     <img class= "game-art" src="../../assets/outer-wilds-promo-art.jfif" 

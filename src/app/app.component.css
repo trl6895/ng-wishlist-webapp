@@ -1,8 +1,10 @@
 h1 {
-    color: #f84
+    color: #9b5dd9;
+    font-size: 60px;
+    justify-content: center;
+    margin: auto;
 }
 
 .descriptor {
-    font-style: italic;
-    color:black;
+    color: slategray;
 }
