@@ -32,7 +32,6 @@ div.grid-elem {
 }
 
 img.game-art {
-    max-width: 35em;
     max-height: fit-content;
     float:right;
 }

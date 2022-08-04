@@ -1,0 +1,6 @@
+<section>
+    <app-vg *ngFor="let vg of vgs"
+        [vg]="vg"
+        (wishlist)="onVGWishlist($event)"></app-vg>
+</section>
+

@@ -5,10 +5,11 @@
     <em class="cat">Developer:   </em>{{ vg.dev }}<br>
     <em class="cat">Publisher:   </em>{{ vg.pub }}<br>
     <em class="cat">Release Date:   </em>{{ vg.date }}<br>
-    <em class="cat">Genres:   </em>Expolration, Space, Mystery<br>
-    <a class="wishlist" (click)="wishlist()">Wishlist This Game!</a>
+    <em class="cat">Genres:   </em>{{ vg.gens.join(", ") }}<br>
+    <a class="wishlist" (click)="onWishlist()" *ngIf="!vg.wishlisted">Wishlist This Game!</a>
+    <a class="wishlist" *ngIf="vg.wishlisted">Wishlisted!</a>
 </div>
 <div class="grid-elem">
-    <img class= "game-art" src="../../assets/outer-wilds-promo-art.jfif" 
+    <img class= "game-art" src="{{ vg.art }}" 
         alt="art showing a campfire on a small planet with space surrounding it">
 </div>
