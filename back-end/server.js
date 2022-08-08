@@ -1,5 +1,4 @@
 /*import mongoose from "mongoose";
-import express from "express";
 
 export async function mongoSetup() {
     const mongoose = require('mongoose');
