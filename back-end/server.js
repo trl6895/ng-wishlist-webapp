@@ -31,7 +31,8 @@ async function main() {
         url_info: Object,
         name: { type: String,
             required: true },
-        categories: [String]
+        categories: [String],
+        wishlisted: Boolean
     },
     {
         collection: "games"
@@ -45,8 +46,14 @@ async function main() {
     await chic.save();
     */
     //console.log(await Game.find({$or: [{name: 'Among Us'}, {publisher: /Annapurna.*/}]}, { name: 1, developer: 1, publisher: 1, _id: 0 }));
-    
-        /*
+    /*
+    await Game.updateMany(
+            {},
+            { $set : { "wishlisted": false }}
+        );
+    */
+
+    /*
     const kittySchema = new mongoose.Schema({
         name: String
     });
@@ -58,7 +65,7 @@ async function main() {
 
     await silence.save();
     */
-}
+};
 /*
 async () => {
     const mongoose = require('mongoose');
