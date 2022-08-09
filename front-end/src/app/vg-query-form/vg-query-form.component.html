@@ -1,0 +1,12 @@
+<header> 
+    <h4>Search For A Steam Game</h4> 
+</header>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <ul>
+        <li>
+            <label class="form-label">Title:</label>
+            <input type="text" name="title" id="title" formControlName="title">
+        </li>
+    </ul>
+    <button type="submit" [disabled]="!form.valid">Submit</button>
+</form>
