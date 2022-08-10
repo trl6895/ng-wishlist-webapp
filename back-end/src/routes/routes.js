@@ -1,4 +1,4 @@
-import { addNewGame, getGames } from "../controllers/controller";
+import { addNewGame, getGames, getGameLikeTitle } from "../controllers/controller";
 
 const routes = (app) => {
     app.route('/game')
@@ -10,6 +10,9 @@ const routes = (app) => {
         }, getGames)
 
         .post(addNewGame);
+
+    app.route('/game/:name')
+        .get(getGameLikeTitle);
 
 }
 
