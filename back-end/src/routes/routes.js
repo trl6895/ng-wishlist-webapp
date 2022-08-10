@@ -1,4 +1,4 @@
-import { addNewGame } from "../controllers/controller";
+import { addNewGame, getGames } from "../controllers/controller";
 
 const routes = (app) => {
     app.route('/game')
@@ -7,9 +7,7 @@ const routes = (app) => {
             console.log(`Request from: ${req.originalUrl}`);
             console.log(`Request type: ${req.method}`);
             
-        }, (req, res, next) => {
-            res.send('GET request successful!');
-        })
+        }, getGames)
 
         .post(addNewGame);
 

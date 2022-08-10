@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 import { gameSchema } from '../models/model';
 
+const GAME_DISPLAY_LIM = 10;
+
 const Game = mongoose.model('games', gameSchema);
 
 export const addNewGame = (req, res) => {
@@ -12,4 +14,15 @@ export const addNewGame = (req, res) => {
         }
         res.json(game);
     });
+}
+
+export const getGames = (req, res) => {
+    
+
+    Game.find({}, (err, game) => {
+        if (err) {
+            res.send(err);
+        }
+        res.json(game);
+    }).limit(GAME_DISPLAY_LIM);
 }
