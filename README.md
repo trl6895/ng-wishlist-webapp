@@ -4,7 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` in ./front-end for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+Run `npm run` in ./back-end to run back-end server.
+
+Ideally this app will eventually be able to use the back-end to query a mongodb that is hosted at localhost:27017
 
 ## Code scaffolding
 
