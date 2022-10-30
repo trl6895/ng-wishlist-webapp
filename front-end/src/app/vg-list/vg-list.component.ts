@@ -16,7 +16,10 @@ export class VgListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.vgs = this.vgService.get();  
+    this.vgService.get().subscribe((vgs) => {
+      console.log(vgs);
+      this.vgs = vgs;
+    });  
   }
 
   onVGWishlist(vg: any){

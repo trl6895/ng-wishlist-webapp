@@ -23,7 +23,7 @@ export const getGames = (req, res) => {
         if (err) {
             res.send(err);
         }
-        res.json(game);
+        console.log(res.json(game));
     }).limit(GAME_DISPLAY_LIM);
 }
 

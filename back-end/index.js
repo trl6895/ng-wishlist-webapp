@@ -18,6 +18,15 @@ mongoose.connect('mongodb://localhost:27017/mocksteam', {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+const cors = require('cors');
+
+var corsOptions = {
+  origin: 'http://localhost:4200',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 routes(app);
 
 app.get('/', (req, res) => {
